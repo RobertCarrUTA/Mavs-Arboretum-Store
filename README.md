@@ -8,6 +8,7 @@
   * [Compile Instructions](#compile-instructions)
   * [SCRUM Spreadsheet](#scrum-spreadsheet)
   * [Project TODO Items](#project-todo-items)
+  * [Project UML Class Diagram](#project-uml-class-diagram)
 
 ## About the Project
 Using the C++ gtkmm library, this project offers a friendly user interface for a hypothetical gardening store. The store's structure is based on a number of classes that work together through object-oriented programming. UML class diagrams guided the design of the program.
@@ -26,3 +27,7 @@ The SCRUM spreadsheet for the project can be found by [clicking here](/Scrum_MAN
 
 ## Project TODO Items
 * Organize the repository into folders while still preserving the Makefile and its commands.
+
+## Project UML Class Diagram
+This project was designed and implemented using the UML class diagram shown below.
+![alt text](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/UML-Class-Diagram-Requirements.png)

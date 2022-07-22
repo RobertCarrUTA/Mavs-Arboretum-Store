@@ -9,8 +9,9 @@
 
 class Mainwin: public Gtk::Window
 {
-  public: Mainwin();
-  virtual~Mainwin();
+  public:
+    Mainwin();
+    virtual~Mainwin();
 
   protected:
     void on_save_click();

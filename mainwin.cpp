@@ -912,7 +912,6 @@ void Mainwin::on_new_mulch_click()
   hb_material.pack_start(s_material);
   dialog.get_content_area() -> pack_start(hb_material, Gtk::PACK_SHRINK, 0);
 
-  // Add 2 buttons (Gtk::Dialog handles buttons for you, just use add_button method!)
   // Button response IDs are from https://developer.gnome.org/gtkmm/stable/group__gtkmmEnums.html
   dialog.add_button("Add Mulch", Gtk::RESPONSE_OK);
   dialog.add_button("Cancel", Gtk::RESPONSE_CANCEL);

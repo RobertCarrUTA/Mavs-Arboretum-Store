@@ -3,7 +3,8 @@
 
 #include "product.h"
 
-enum class Material {
+enum class Material
+{
   RUBBER,
   PINE,
   CEDAR,
@@ -12,13 +13,14 @@ enum class Material {
 
 std::string to_string(Material material);
 
-std::ostream& operator<<(std::ostream& ost, const Material& material);
+std::ostream & operator << (std::ostream & ost, const Material & material);
 
-class Mulch : public Product {
+class Mulch: public Product
+{
   public:
     Mulch(std::string name, double price, std::string description, int volume, Material material);
-    void save(std::ostream& ost) override;
-    Mulch(std::istream& ist);
+    void save(std::ostream & ost) override;
+    Mulch(std::istream & ist);
   protected:
     std::string to_string() const override;
   private:

@@ -5,13 +5,14 @@
 #include <vector>
 #include <fstream>
 
-class Customer {
+class Customer
+{
   public: 
     Customer(std::string name, std::string phone, std::string email);
     virtual void save(std::ostream& ost);
     Customer(std::istream& ist);
     friend std::ostream& operator<<(std::ostream& ost, const Customer& customer);
-    std::string getCustomerName() {return _name;}
+    std::string getCustomerName() { return _name; }
   protected:
     virtual std::string to_string() const;
   private:
@@ -19,6 +20,5 @@ class Customer {
     std::string _phone;
     std::string _email;
 };
-
 
 #endif

@@ -51,6 +51,7 @@ class Order_store
     std::string _customer; // customer who has the order
     typedef std::vector < Order > Orders;
     Orders c_orders; // the customers list of orders
+    
   public:
     Order_store(std::string customer_name): _customer { customer_name } {}
     std::string customer_name() { return _customer; }

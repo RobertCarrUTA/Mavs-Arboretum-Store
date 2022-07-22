@@ -1,8 +1,8 @@
 *README.md is still under construction*
-# Mavs-Arboetum
+# Mavs-Arboretum
 
 ## Table of Contents
-- Mavs Arboetum in C++
+- Mavs Arboretum in C++
   * [About the Project](#about-the-project)
   * [Project Demo Video](#project-demo-video)
   * [Compile Instructions](#compile-instructions)

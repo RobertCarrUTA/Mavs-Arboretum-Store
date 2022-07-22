@@ -5,7 +5,6 @@
 
 Mainwin::Mainwin(): store { nullptr }, display { new Gtk::Label {} }
 {
-
   // /////////////////
   // G U I   S E T U P
   // /////////////////
@@ -301,8 +300,7 @@ void Mainwin::on_save_click()
 
 void Mainwin::on_save_as_click()
 {
-  Gtk::FileChooserDialog dialog("Please choose a file",
-    Gtk::FileChooserAction::FILE_CHOOSER_ACTION_SAVE);
+  Gtk::FileChooserDialog dialog("Please choose a file", Gtk::FileChooserAction::FILE_CHOOSER_ACTION_SAVE);
   dialog.set_transient_for( * this);
 
   auto filter_store = Gtk::FileFilter::create();
@@ -429,7 +427,7 @@ void Mainwin::on_about_click()
   msg -> set_markup("You have opened the about page");
 }
 
-// this allows the first store to open as untitled until a new store is named on on_new_store_click()
+// This allows the first store to open as untitled until a new store is named on on_new_store_click()
 void Mainwin::on_new_store()
 {
   delete store;

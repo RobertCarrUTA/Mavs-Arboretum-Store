@@ -17,10 +17,10 @@ Using the C++ gtkmm library, this project offers a friendly user interface for a
 [Click here to see the project demo](https://www.youtube.com/watch?v=xdmtEtFTomY).
 
 ## Compile Instructions
-These compile instructions are for a Ubuntu Operating System
+The following compile instructions are for Ubuntu. In addition, we assume you have all the required files and are entering them in the directory containing those files.
 * compile: Using the terminal, navigate to the directory where these files are located, and then enter "make" to compile the program.
 * run: Using the directory where "make" was run, enter "./manga"
-* clean: Clean the directory by entering "clean" in the directory where you used "make"
+* clean: Enter "clean" to delete the executable file and all its object files
 
 ## SCRUM Spreadsheet
 The SCRUM spreadsheet for the project can be found by [clicking here](/Scrum_MANGA.ods).

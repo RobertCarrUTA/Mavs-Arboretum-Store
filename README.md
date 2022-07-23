@@ -11,7 +11,7 @@
   * [Project UML Class Diagram](#project-uml-class-diagram)
 
 ## About the Project
-This C++17 project offers a friendly user interface for a hypothetical gardening store (using the C++ gtkmm library). The store's structure is based on a number of classes that work together through object-oriented programming. [UML class diagrams](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/UML-Class-Diagram-Requirements.png) guided the design of the program.
+This C++17 project offers a friendly user interface for a hypothetical gardening store (using the C++ gtkmm library). Making use of a [Makefile](https://www.gnu.org/software/make/manual/make.html) makes it easy to compile and run the program. The store's structure is based on a number of classes that work together through object-oriented programming. [UML class diagrams](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/UML-Class-Diagram-Requirements.png) guided the design of the program.
 
 ## Project Demo Video
 [Click here to see the project demo](https://www.youtube.com/watch?v=xdmtEtFTomY).

@@ -11,7 +11,7 @@
   * [Project UML Class Diagram](#project-uml-class-diagram)
 
 ## About the Project
-Using the C++ gtkmm library, this project offers a friendly user interface for a hypothetical gardening store. The store's structure is based on a number of classes that work together through object-oriented programming. UML class diagrams guided the design of the program.
+This C++17 project offers a friendly user interface for a hypothetical gardening store (using the C++ gtkmm library). The store's structure is based on a number of classes that work together through object-oriented programming. [UML class diagrams](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/UML-Class-Diagram-Requirements.png) guided the design of the program.
 
 ## Project Demo Video
 [Click here to see the project demo](https://www.youtube.com/watch?v=xdmtEtFTomY).
@@ -20,7 +20,7 @@ Using the C++ gtkmm library, this project offers a friendly user interface for a
 The following compile instructions are for Ubuntu. In addition, we assume you have all the required files and are entering them in the directory containing those files.
 * compile: Using the terminal, navigate to the directory where these files are located, and then enter "make" to compile the program.
 * run: Using the directory where "make" was run, enter "./manga"
-* clean: Enter "clean" to delete the executable file and all its object files
+* clean: Enter "make clean" to delete the executable file and all its object files
 
 ## SCRUM Spreadsheet
 The SCRUM spreadsheet for the project can be found by [clicking here](/Scrum_MANGA.ods).

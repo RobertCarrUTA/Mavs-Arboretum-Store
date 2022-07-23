@@ -6,14 +6,15 @@
 
 class Item
 {
-  public:
-    Item(Product & product, int quantity);
-    Item(std::istream & ist);
-    void save(std::ostream & ost);
+public:
+    Item(Product &product, int quantity);
+    Item(std::istream &ist);
+    void save(std::ostream &ost);
     double subtotal();
-    friend std::ostream & operator << (std::ostream & ost, const Item & item);
-  private:
-    Product * _product;
+    friend std::ostream &operator<<(std::ostream &ost, const Item &item);
+
+private:
+    Product *_product;
     int _quantity;
 };
 

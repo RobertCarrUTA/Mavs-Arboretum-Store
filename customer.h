@@ -7,14 +7,16 @@
 
 class Customer
 {
-  public: 
+  public:
     Customer(std::string name, std::string phone, std::string email);
-    virtual void save(std::ostream& ost);
-    Customer(std::istream& ist);
-    friend std::ostream& operator<<(std::ostream& ost, const Customer& customer);
+    virtual void save(std::ostream &ost);
+    Customer(std::istream &ist);
+    friend std::ostream &operator<<(std::ostream &ost, const Customer &customer);
     std::string getCustomerName() { return _name; }
+
   protected:
     virtual std::string to_string() const;
+
   private:
     std::string _name;
     std::string _phone;

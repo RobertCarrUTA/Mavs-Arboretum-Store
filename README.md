@@ -26,6 +26,7 @@ The 6 week SCRUM spreadsheet for the project can be found by [clicking here](htt
 
 # Known Issues
 * Hitting the cancel button when creating a new store will cause the program to crash. The program will not crash if you hit X on the window or press ESC. Fixing this is on my to-do list.
+* The program crashes if a user clicks the X on the Add New Order window when the customer list is empty. A new order will be created for a customer if the customer list is not empty and the user clicks the X on the window. In contrast, pressing the Cancel button does not cause it to crash, pressing ESC does cause it to crash. Fixing this is on my to-do list.
 
 ## Project UML Class Diagram
 This project was designed and implemented using the UML class diagram shown below.

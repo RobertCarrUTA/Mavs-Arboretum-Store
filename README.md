@@ -7,7 +7,7 @@
   * [Project Demo Video](#project-demo-video)
   * [Compile Instructions](#compile-instructions)
   * [SCRUM Spreadsheet](#scrum-spreadsheet)
-  * [Project TODO Items](#project-todo-items)
+  * [Known Issues](#known-issues)
   * [Project UML Class Diagram](#project-uml-class-diagram)
 
 ## About the Project
@@ -25,8 +25,8 @@ The following compile instructions are for Ubuntu. In addition, we assume you ha
 ## SCRUM Spreadsheet
 The 6 week SCRUM spreadsheet for the project can be found by [clicking here](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/documents/Scrum_MANGA.ods). Using a Linux operating system is recommended for viewing the spreadsheet.
 
-## Project TODO Items
-* Organize the repository into folders while still preserving the Makefile and its commands.
+# Known Issues
+* Hitting the cancel button when creating a new store will cause the program to crash. The program will not crash if you hit X on the window or press ESC. Fixing this is on my to-do list.
 
 ## Project UML Class Diagram
 This project was designed and implemented using the UML class diagram shown below.

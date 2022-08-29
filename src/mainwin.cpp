@@ -411,7 +411,7 @@ void Mainwin::on_about_click()
     Gtk::AboutDialog dialog;
     dialog.set_transient_for(*this); // Avoid the discouraging warning
     dialog.set_program_name("MANGA");
-    auto logo = Gdk::Pixbuf::create_from_file("Garden.jpg");
+    auto logo = Gdk::Pixbuf::create_from_file("images/Garden.jpg");
     dialog.set_logo(logo);
     dialog.set_version("Version 0.3");
     dialog.set_copyright("Copyright 2020");
@@ -995,7 +995,7 @@ void Mainwin::on_quit_click()
 
 std::string Mainwin::get_string(std::string prompt)
 {
-    EntryDialog edialog(*this, "<big>New Product</big>", true, Gtk::MESSAGE_QUESTION, Gtk::BUTTONS_OK_CANCEL);
+    EntryDialog edialog(*this, "<big>New Store</big>", true, Gtk::MESSAGE_QUESTION, Gtk::BUTTONS_OK_CANCEL);
     edialog.set_secondary_text(prompt, true);
     if (edialog.run() == Gtk::RESPONSE_CANCEL)
         throw std::runtime_error{"CANCEL"};

@@ -23,11 +23,11 @@ The following compile instructions are for Ubuntu. In addition, we assume you ha
 * clean: Enter "make clean" to delete the executable file and all its object files
 
 ## SCRUM Spreadsheet
-The SCRUM spreadsheet for the project can be found by [clicking here](/Scrum_MANGA.ods).
+The 6 week SCRUM spreadsheet for the project can be found by [clicking here](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/documents/Scrum_MANGA.ods). Using a Linux operating system is recommended for viewing the spreadsheet.
 
 ## Project TODO Items
 * Organize the repository into folders while still preserving the Makefile and its commands.
 
 ## Project UML Class Diagram
 This project was designed and implemented using the UML class diagram shown below.
-![alt text](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/UML-Class-Diagram-Requirements.png)
+![alt text](https://github.com/RobertCarrUTA/Mavs-Arboretum-Store/blob/main/documents/UML-Class-Diagram-Requirements.png)

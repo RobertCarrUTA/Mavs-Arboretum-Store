@@ -194,7 +194,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*sep1);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *customer_image = Gtk::manage(new Gtk::Image{"woman.png"});
+    Gtk::Image *customer_image = Gtk::manage(new Gtk::Image{"images/woman.png"});
     Gtk::ToolButton *new_customer = Gtk::manage(new Gtk::ToggleToolButton(*customer_image));
     new_customer->set_tooltip_markup("Add a new customer to the store");
     new_customer->signal_clicked().connect([this]
@@ -202,7 +202,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*new_customer);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *order_image = Gtk::manage(new Gtk::Image{"cart.png"});
+    Gtk::Image *order_image = Gtk::manage(new Gtk::Image{"images/cart.png"});
     Gtk::ToolButton *new_order = Gtk::manage(new Gtk::ToggleToolButton(*order_image));
     new_order->set_tooltip_markup("Add a new order to the store");
     new_order->signal_clicked().connect([this]
@@ -215,7 +215,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*sep2);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *tool_image = Gtk::manage(new Gtk::Image{"growing.png"});
+    Gtk::Image *tool_image = Gtk::manage(new Gtk::Image{"images/growing.png"});
     Gtk::ToolButton *new_tool_order = Gtk::manage(new Gtk::ToggleToolButton(*tool_image));
     new_tool_order->set_tooltip_markup("Add a new tool to the store");
     new_tool_order->signal_clicked().connect([this]
@@ -223,7 +223,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*new_tool_order);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *plant_image = Gtk::manage(new Gtk::Image{"sprout.png"});
+    Gtk::Image *plant_image = Gtk::manage(new Gtk::Image{"images/sprout.png"});
     Gtk::ToolButton *new_plant_order = Gtk::manage(new Gtk::ToggleToolButton(*plant_image));
     new_plant_order->set_tooltip_markup("Add a new plant to the store");
     new_plant_order->signal_clicked().connect([this]
@@ -231,7 +231,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*new_plant_order);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *mulch_image = Gtk::manage(new Gtk::Image{"wheelbarrow.png"});
+    Gtk::Image *mulch_image = Gtk::manage(new Gtk::Image{"images/wheelbarrow.png"});
     Gtk::ToolButton *new_mulch_order = Gtk::manage(new Gtk::ToggleToolButton(*mulch_image));
     new_mulch_order->set_tooltip_markup("Add a new mulch to the store");
     new_mulch_order->signal_clicked().connect([this]
@@ -244,7 +244,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*sep3);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *customers_image = Gtk::manage(new Gtk::Image{"group.png"});
+    Gtk::Image *customers_image = Gtk::manage(new Gtk::Image{"images/group.png"});
     Gtk::ToolButton *view_customers = Gtk::manage(new Gtk::ToggleToolButton(*customers_image));
     view_customers->set_tooltip_markup("View all customers in the current store");
     view_customers->signal_clicked().connect([this]
@@ -252,7 +252,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*view_customers);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *orders_image = Gtk::manage(new Gtk::Image{"online-order.png"});
+    Gtk::Image *orders_image = Gtk::manage(new Gtk::Image{"images/online-order.png"});
     Gtk::ToolButton *view_orders = Gtk::manage(new Gtk::ToggleToolButton(*orders_image));
     view_orders->set_tooltip_markup("View all orders in the current store");
     view_orders->signal_clicked().connect([this]
@@ -260,7 +260,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     toolbar->append(*view_orders);
 
     // Add a toggle button to enable computer to play as Player 2
-    Gtk::Image *products_image = Gtk::manage(new Gtk::Image{"gardening-tools.png"});
+    Gtk::Image *products_image = Gtk::manage(new Gtk::Image{"images/gardening-tools.png"});
     Gtk::ToolButton *view_products = Gtk::manage(new Gtk::ToggleToolButton(*products_image));
     view_products->set_tooltip_markup("View all products in the current store");
     view_products->signal_clicked().connect([this]

@@ -1,5 +1,4 @@
-*README.md is still under construction*
-# Mavs-Arboretum
+# Mavs Arboretum
 
 ## Table of Contents
 - Mavs Arboretum in C++

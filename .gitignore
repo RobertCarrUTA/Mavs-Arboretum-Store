@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+*.log
+*.json
+.VSCodeCounter/2022-08-19_16-22-29/details.md
+.VSCodeCounter/2022-08-19_16-22-29/diff-details.md
+.VSCodeCounter/2022-08-19_16-22-29/diff.csv
+.VSCodeCounter/2022-08-19_16-22-29/diff.md
+.VSCodeCounter/2022-08-19_16-22-29/results.csv
+.VSCodeCounter/2022-08-19_16-22-29/results.md
+.VSCodeCounter/2022-08-19_16-22-29/results.txt
+.VSCodeCounter/2022-08-19_16-22-29/diff.txt

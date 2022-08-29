@@ -11,7 +11,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     // /////////////////
 
     set_default_size(500, 500);
-    set_title("Manga Manager"); // Title of the application
+    set_title("Manga Manager"); // COME BACK AND CHANGE THIS WHEN YOU HAVE A BETTER IDEA OF WHAT TO PUT!!!
 
     // Put a vertical box container as the Window contents
     Gtk::Box *vbox = Gtk::manage(new Gtk::VBox);
@@ -23,35 +23,35 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     Gtk::MenuBar *menubar = Gtk::manage(new Gtk::MenuBar);
     vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
 
-    // F I L E
+    //     F I L E
     // Create a File menu and add to the menu bar
     Gtk::MenuItem *menuitem_file = Gtk::manage(new Gtk::MenuItem("_File", true));
     menubar->append(*menuitem_file);
     Gtk::Menu *filemenu = Gtk::manage(new Gtk::Menu());
     menuitem_file->set_submenu(*filemenu);
 
-    // Q U I T
+    //         Q U I T
     // Append Quit to the File menu
     Gtk::MenuItem *menuitem_quit = Gtk::manage(new Gtk::MenuItem("_Quit", true));
     menuitem_quit->signal_activate().connect([this]
                                              { this->on_quit_click(); });
     filemenu->append(*menuitem_quit);
 
-    // I N S E R T
+    //     I N S E R T
     // Create an Insert menu and add to the menu bar
     Gtk::MenuItem *menuitem_insert = Gtk::manage(new Gtk::MenuItem("_Insert", true));
     menubar->append(*menuitem_insert);
     Gtk::Menu *insertmenu = Gtk::manage(new Gtk::Menu());
     menuitem_insert->set_submenu(*insertmenu);
 
-    // N E W   S T O R E
+    //     N E W   S T O R E
     // Add a new store
     Gtk::MenuItem *menuitem_new = Gtk::manage(new Gtk::MenuItem("_New Store", true));
     menuitem_new->signal_activate().connect([this]
                                             { this->on_new_store_click(); });
     filemenu->append(*menuitem_new);
 
-    // S A V E   S T O R E
+    //     S A V E   S T O R E
     // Save a store to the default filename
     Gtk::MenuItem *save_button = Gtk::manage(new Gtk::MenuItem("_Save", true));
     // save_button->set_tooltip_markup("Save store to the default filename");
@@ -59,91 +59,91 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                            { this->on_save_click(); });
     filemenu->append(*save_button);
 
-    // S A V E   S T O R E   A S
+    //         S A V E   S T O R E   A S
     // Append Save As... to the File menu
     Gtk::MenuItem *menuitem_save_as = Gtk::manage(new Gtk::MenuItem("Save _As", true));
     menuitem_save_as->signal_activate().connect([this]
                                                 { this->on_save_as_click(); });
     filemenu->append(*menuitem_save_as);
 
-    // O P E N   S T O R E
+    //         O P E N   S T O R E
     // Append Open... to the File menu
     Gtk::MenuItem *menuitem_open = Gtk::manage(new Gtk::MenuItem("_Open", true));
     menuitem_open->signal_activate().connect([this]
                                              { this->on_open_click(); });
     filemenu->append(*menuitem_open);
 
-    // H E L P
+    //     H E L P
     // Create a Help menu and add to the menu bar
     Gtk::MenuItem *menuitem_help = Gtk::manage(new Gtk::MenuItem("_Help", true));
     menubar->append(*menuitem_help);
     Gtk::Menu *helpmenu = Gtk::manage(new Gtk::Menu());
     menuitem_help->set_submenu(*helpmenu);
 
-    // A B O U T
+    //           A B O U T
     // Append About to the Help menu
     Gtk::MenuItem *menuitem_about = Gtk::manage(new Gtk::MenuItem("_About", true));
     menuitem_about->signal_activate().connect([this]
                                               { this->on_about_click(); });
     helpmenu->append(*menuitem_about);
 
-    // V I E W
+    //    V I E W
     // Create a View menu and add to the menu bar
     Gtk::MenuItem *menuitem_view = Gtk::manage(new Gtk::MenuItem("_View", true));
     menubar->append(*menuitem_view);
     Gtk::Menu *viewmenu = Gtk::manage(new Gtk::Menu());
     menuitem_view->set_submenu(*viewmenu);
 
-    // I N S E R T  C U S T O M E R
+    //    I N S E R T  C U S T O M E R
     // Append Tool to the Insert menu
     Gtk::MenuItem *menuitem_customer = Gtk::manage(new Gtk::MenuItem("_Customer", true));
     menuitem_customer->signal_activate().connect([this]
                                                  { this->on_new_customer_click(); });
     insertmenu->append(*menuitem_customer);
 
-    // V I E W  C U S T O M E R S
+    //    V I E W  C U S T O M E R S
     // Append View Customer to the Insert menu
     Gtk::MenuItem *menuitem_view_customer = Gtk::manage(new Gtk::MenuItem("_View Customers", true));
     menuitem_view_customer->signal_activate().connect([this]
                                                       { this->on_view_customers_click(); });
     viewmenu->append(*menuitem_view_customer);
 
-    // V I E W  P R O D U C T S
+    //    V I E W  P R O D U C T S
     // Append View Products to the Insert menu
     Gtk::MenuItem *menuitem_view_products = Gtk::manage(new Gtk::MenuItem("_View Products", true));
     menuitem_view_products->signal_activate().connect([this]
                                                       { this->on_view_products_click(); });
     viewmenu->append(*menuitem_view_products);
 
-    // T O O L
+    //           T O O L
     // Append Tool to the Insert menu
     Gtk::MenuItem *menuitem_tool = Gtk::manage(new Gtk::MenuItem("_Tool", true));
     menuitem_tool->signal_activate().connect([this]
                                              { this->on_new_tool_click(); });
     insertmenu->append(*menuitem_tool);
 
-    // P L A N T
+    //           P L A N T
     // Append Plant to the Insert menu
     Gtk::MenuItem *menuitem_plant = Gtk::manage(new Gtk::MenuItem("_Plant", true));
     menuitem_plant->signal_activate().connect([this]
                                               { this->on_new_plant_click(); });
     insertmenu->append(*menuitem_plant);
 
-    // M U L C H
+    //           M U L C H
     // Append Mulch to the Insert menu
     Gtk::MenuItem *menuitem_mulch = Gtk::manage(new Gtk::MenuItem("_Mulch", true));
     menuitem_mulch->signal_activate().connect([this]
                                               { this->on_new_mulch_click(); });
     insertmenu->append(*menuitem_mulch);
 
-    // O R D E R
+    //           O R D E R
     // Append Order to the Insert menu
     Gtk::MenuItem *menuitem_order = Gtk::manage(new Gtk::MenuItem("_Order", true));
     menuitem_order->signal_activate().connect([this]
                                               { this->on_new_order_click(); });
     insertmenu->append(*menuitem_order);
 
-    // V I E W  O R D E R S
+    //    V I E W  O R D E R S
     // Append View Orders to the Insert menu
     Gtk::MenuItem *menuitem_view_orders = Gtk::manage(new Gtk::MenuItem("_View Orders", true));
     menuitem_view_orders->signal_activate().connect([this]
@@ -156,15 +156,15 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
     Gtk::Toolbar *toolbar = Gtk::manage(new Gtk::Toolbar);
     vbox->pack_start(*toolbar, Gtk::PACK_SHRINK, 0);
 
-    // N E W   S T O R E
-    // Add a new store icon
+    //     N E W   G A M E
+    // Add a new game icon
     Gtk::ToolButton *new_store_button = Gtk::manage(new Gtk::ToolButton(Gtk::Stock::NEW));
     new_store_button->set_tooltip_markup("Create a new store, discarding any unsaved progress");
     new_store_button->signal_clicked().connect([this]
                                                { this->on_new_store_click(); });
     toolbar->append(*new_store_button);
 
-    // O P E N  S T O R E
+    //     O P E N  S T O R E
     // Add a new Open Store icon
     Gtk::ToolButton *open_store_button = Gtk::manage(new Gtk::ToolButton(Gtk::Stock::OPEN));
     open_store_button->set_tooltip_markup("Open a store file, discarding any unsaved progress");
@@ -172,7 +172,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                                 { this->on_open_click(); });
     toolbar->append(*open_store_button);
 
-    // S A V E  S T O R E
+    //     S A V E  S T O R E
     // Add a new Save Store icon
     Gtk::ToolButton *save_store_button = Gtk::manage(new Gtk::ToolButton(Gtk::Stock::SAVE));
     save_store_button->set_tooltip_markup("Save a store file, saving all unsaved progress");
@@ -180,7 +180,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                                 { this->on_save_click(); });
     toolbar->append(*save_store_button);
 
-    // S A V E  A S  S T O R E
+    //     S A V E  A S  S T O R E
     // Add a new Save As icon
     Gtk::ToolButton *save_as_store_button = Gtk::manage(new Gtk::ToolButton(Gtk::Stock::SAVE_AS));
     save_as_store_button->set_tooltip_markup("Save As, saving the file under a user defined name");
@@ -188,12 +188,12 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                                    { this->on_save_as_click(); });
     toolbar->append(*save_as_store_button);
 
-    // S E P A R A T O R
+    //     S E P A R A T O R
     // Add a little space between the file buttons and add buttons
     Gtk::SeparatorToolItem *sep1 = Gtk::manage(new Gtk::SeparatorToolItem());
     toolbar->append(*sep1);
 
-    // Add a button to add a new customer to the store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *customer_image = Gtk::manage(new Gtk::Image{"woman.png"});
     Gtk::ToolButton *new_customer = Gtk::manage(new Gtk::ToggleToolButton(*customer_image));
     new_customer->set_tooltip_markup("Add a new customer to the store");
@@ -201,7 +201,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                            { this->on_new_customer_click(); });
     toolbar->append(*new_customer);
 
-    // Add a button to add a new order to the store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *order_image = Gtk::manage(new Gtk::Image{"cart.png"});
     Gtk::ToolButton *new_order = Gtk::manage(new Gtk::ToggleToolButton(*order_image));
     new_order->set_tooltip_markup("Add a new order to the store");
@@ -209,12 +209,12 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                         { this->on_new_order_click(); });
     toolbar->append(*new_order);
 
-    // S E P A R A T O R
+    //     S E P A R A T O R
     // Add a little space between the new customer button and new order button
     Gtk::SeparatorToolItem *sep2 = Gtk::manage(new Gtk::SeparatorToolItem());
     toolbar->append(*sep2);
 
-    // Add a button to add a new tool to the store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *tool_image = Gtk::manage(new Gtk::Image{"growing.png"});
     Gtk::ToolButton *new_tool_order = Gtk::manage(new Gtk::ToggleToolButton(*tool_image));
     new_tool_order->set_tooltip_markup("Add a new tool to the store");
@@ -222,7 +222,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                              { this->on_new_tool_click(); });
     toolbar->append(*new_tool_order);
 
-    // Add a button to add a new plant to the store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *plant_image = Gtk::manage(new Gtk::Image{"sprout.png"});
     Gtk::ToolButton *new_plant_order = Gtk::manage(new Gtk::ToggleToolButton(*plant_image));
     new_plant_order->set_tooltip_markup("Add a new plant to the store");
@@ -230,7 +230,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                               { this->on_new_plant_click(); });
     toolbar->append(*new_plant_order);
 
-    // Add a button to add a new mulch to the store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *mulch_image = Gtk::manage(new Gtk::Image{"wheelbarrow.png"});
     Gtk::ToolButton *new_mulch_order = Gtk::manage(new Gtk::ToggleToolButton(*mulch_image));
     new_mulch_order->set_tooltip_markup("Add a new mulch to the store");
@@ -238,12 +238,12 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                               { this->on_new_mulch_click(); });
     toolbar->append(*new_mulch_order);
 
-    // S E P A R A T O R
+    //     S E P A R A T O R
     // Add a little space between the new products buttons and view all buttons
     Gtk::SeparatorToolItem *sep3 = Gtk::manage(new Gtk::SeparatorToolItem());
     toolbar->append(*sep3);
 
-    // Add a button to view all customers in the current store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *customers_image = Gtk::manage(new Gtk::Image{"group.png"});
     Gtk::ToolButton *view_customers = Gtk::manage(new Gtk::ToggleToolButton(*customers_image));
     view_customers->set_tooltip_markup("View all customers in the current store");
@@ -251,7 +251,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                              { this->on_view_customers_click(); });
     toolbar->append(*view_customers);
 
-    // Add a button to view all orders in the current store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *orders_image = Gtk::manage(new Gtk::Image{"online-order.png"});
     Gtk::ToolButton *view_orders = Gtk::manage(new Gtk::ToggleToolButton(*orders_image));
     view_orders->set_tooltip_markup("View all orders in the current store");
@@ -259,7 +259,7 @@ Mainwin::Mainwin() : store{nullptr}, display{new Gtk::Label{}}
                                           { this->on_view_orders_click(); });
     toolbar->append(*view_orders);
 
-    // Add a button to view all products in the current store
+    // Add a toggle button to enable computer to play as Player 2
     Gtk::Image *products_image = Gtk::manage(new Gtk::Image{"gardening-tools.png"});
     Gtk::ToolButton *view_products = Gtk::manage(new Gtk::ToggleToolButton(*products_image));
     view_products->set_tooltip_markup("View all products in the current store");
@@ -480,7 +480,7 @@ void Mainwin::on_new_customer_click()
     e_phone.set_placeholder_text("xxx-xxx-xxxx");
     e_email.set_placeholder_text("xxxx@domain.com");
 
-    // Add 2 buttons (Gtk::Dialog handles buttons this, just use add_button method)
+    // Add 2 buttons (Gtk::Dialog handles buttons for you, just use add_button method!)
     // Button response IDs are from https://developer.gnome.org/gtkmm/stable/group__gtkmmEnums.html
     dialog.add_button("Insert", Gtk::RESPONSE_OK);
     dialog.add_button("Cancel", Gtk::RESPONSE_CANCEL);
@@ -690,6 +690,7 @@ void Mainwin::on_new_tool_click()
     hb_description.pack_start(e_description);
     dialog.get_content_area()->pack_start(hb_description, Gtk::PACK_SHRINK, 0);
 
+    // Add 2 buttons (Gtk::Dialog handles buttons for you, just use add_button method!)
     // Button response IDs are from https://developer.gnome.org/gtkmm/stable/group__gtkmmEnums.html
     dialog.add_button("Add Tool", Gtk::RESPONSE_OK);
     dialog.add_button("Cancel", Gtk::RESPONSE_CANCEL);
@@ -716,7 +717,7 @@ void Mainwin::on_new_tool_click()
 
         std::string name = e_name.get_text();
         double price = static_cast<double>(s_price.get_value());
-        // https: lazka.github.io/pgi-docs/Gtk-3.0/classes/SpinButton.html
+    https: // lazka.github.io/pgi-docs/Gtk-3.0/classes/SpinButton.html
         std::string description = e_description.get_text();
         store->add_product(*(new Tool{name, price, description}));
         on_view_products_click();
@@ -796,6 +797,7 @@ void Mainwin::on_new_plant_click()
     hb_exposure.pack_start(s_exposure);
     dialog.get_content_area()->pack_start(hb_exposure, Gtk::PACK_SHRINK, 0);
 
+    // Add 2 buttons (Gtk::Dialog handles buttons for you, just use add_button method!)
     // Button response IDs are from https://developer.gnome.org/gtkmm/stable/group__gtkmmEnums.html
     dialog.add_button("Add Plant", Gtk::RESPONSE_OK);
     dialog.add_button("Cancel", Gtk::RESPONSE_CANCEL);
@@ -823,7 +825,7 @@ void Mainwin::on_new_plant_click()
 
         std::string name = e_name.get_text();
         double price = static_cast<double>(s_price.get_value());
-        // https: lazka.github.io/pgi-docs/Gtk-3.0/classes/SpinButton.html
+    https: // lazka.github.io/pgi-docs/Gtk-3.0/classes/SpinButton.html
         std::string description = e_description.get_text();
         std::string species = e_species.get_text();
         double e = static_cast<double>(s_exposure.get_value());
@@ -908,6 +910,7 @@ void Mainwin::on_new_mulch_click()
     hb_material.pack_start(s_material);
     dialog.get_content_area()->pack_start(hb_material, Gtk::PACK_SHRINK, 0);
 
+    // Add 2 buttons (Gtk::Dialog handles buttons for you, just use add_button method!)
     // Button response IDs are from https://developer.gnome.org/gtkmm/stable/group__gtkmmEnums.html
     dialog.add_button("Add Mulch", Gtk::RESPONSE_OK);
     dialog.add_button("Cancel", Gtk::RESPONSE_CANCEL);
